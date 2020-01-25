@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import Container from "../components/Container";
-import SearchFrom from "../components/SearchFrom";
-import SearchResults from "../components/SearchResults";
+// import Container from "../components/Container";
+// import SearchForm from "../components/searchForm";
+// import SearchResults from "../components/SearchResults";
 import Jumbotron from "../components/Row";
 import Row from "../components/Row";
 import Col from "../components/Col";
@@ -33,22 +33,24 @@ class Search extends Component {
     };
     render() {
         return (
-            <Container fluid>
+            <container fluid>
                 <Row>
                     <Col size="md sm-12">
                         <Jumbotron>
                             <h1>Search Books</h1>
                         </Jumbotron>
-                        <SearchForm
+                        <searchForm 
                             handleFormSubmit={this.handleFormSubmit}
                             handleInputChange={this.handleInputChange}
                             books={this.state.books}
 
                         />
-                        <SearchResults resutls={this.state.results} />
+                        <searchResults resutls={this.state.results} />
                     </Col>
                 </Row>
-            </Container>
+            </container>
         );
     }
 }
+
+export default Search;

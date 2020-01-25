@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import  { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import Images from "../components/Images";
+import Image from "../components/Image/index";
+import booksStyle from "./booksStyle.css";
 
 class Books extends Component {
     state = {
@@ -62,20 +63,21 @@ class Books extends Component {
                         <Jumbotron>
                             <h1>Wanna Read A Book</h1>
                         </Jumbotron>
-                        <Form>
-                            <Input
+                        <form>
+                            <Input id="textthing"
                             value={this.state.title}
                             onChange={this.handleInputChange}
                             name="title"
                             placeholder="Title (required)"
+                            
                             />
-                             <Input
-                            value={this.state.title}
+                             <Input id="authorthing"
+                            value={this.state.author}
                             onChange={this.handleInputChange}
                             name="author"
                             placeholder="Author (required)"
                             />
-                            <TextArea
+                            <TextArea id="bigthing"
                                 value={this.state.synopsis}
                                 onChange={this.handleInputChange}
                                 name="synopsis"
@@ -88,12 +90,12 @@ class Books extends Component {
                                     Submit Book
                                 </FormBtn>
                             
-                        </Form>
+                        </form>
                     </Col>
                     <Col size="md-6 sm-12">
-                        <Jumbotron>
-                            <h1>Book On My List</h1>
-                        </Jumbotron>
+                        <container-fluid id="booklist">
+                            <h1>Books On My List</h1>
+                        </container-fluid>
                         {this.state.books.length ? (
                             <List>
                                 {this.state.books.map(book => (

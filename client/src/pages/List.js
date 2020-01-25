@@ -1,4 +1,4 @@
-import React, { Compnent } from "react";
+import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
@@ -34,6 +34,8 @@ deleteBook = id => {
 };
 
 handleInputChange = event => {
+    console.log(this.title)
+    console.log(this.author)
     const { name, value } =  event.target;
     this.ListeningStateChangedEvent({
         [name]: value
@@ -58,9 +60,9 @@ handleInputChange = event => {
          <Container fluid>
              <Row>
                  <Col size="md-12 sm-12">
-                     <Jumbotron>
+                     <container-fliud>
                          <h1>Books on My List</h1>
-                     </Jumbotron>
+                     </container-fliud>
                      {this.state.books.length ? (
                          <List>
                              {this.state.books.map(book => (

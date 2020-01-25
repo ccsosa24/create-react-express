@@ -1,0 +1,40 @@
+#booklist {
+background-color: red;
+color:blue;
+text-align: center;
+}
+
+#textthing{
+    width: 50%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: teal;
+    font-size: large;
+   
+    margin-left: 300px;
+    background-color:plum;
+}
+
+#authorthing{
+    width: 50%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: teal;
+    font-size: large;
+    margin-left: 300px;
+    background-color:plum;
+}
+
+#bigthing {
+    width: 710%;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: teal;
+    font-size: large;
+    margin-left: 230px;
+    background-color:plum;
+    
+}
+.placeholder {
+    color:black;
+}

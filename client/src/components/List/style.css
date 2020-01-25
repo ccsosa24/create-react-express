@@ -1,9 +1,12 @@
 .list-overflow-container {
     max-height: 545px;
-    border: 1px #dddddd solid;
+    border: 1px black solid;
     border-radius: 4px;
     overflow-y: scroll;
     overflow-x: hidden;
+    /* background-color: black; */
+    text-align: center;
+    font-size: 20px;
 }
 
 .list-overflow-container ul {

@@ -9,6 +9,8 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     findById: function(req, res) {
+        console.log("YOUR IN FIND BY IDDDDDDD---------")
+        
         db.Book
         .findById(req.params.id)
         .then(dbModel => res.json(dbModel))
